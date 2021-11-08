@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Row, Col } from "react-bootstrap";
 import "./App.css";
 import { client } from "./client";
-
+import Imageslider from "./components/Imageslider";
+import Carousel from "react-bootstrap/Carousel";
 const App = () => {
   //----------USE STATE----------
   const [recipes, setRecipes] = useState([]);
@@ -36,7 +36,11 @@ const App = () => {
     });
   };
 
-  return <>Check the console for the data from Contenful</>;
+  return (
+    <>
+    <Imageslider recipes={recipes}/>
+    </>
+  )
 };
 
 export default App;
