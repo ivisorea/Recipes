@@ -47,11 +47,7 @@ const Imageslider = ({recipes}) => {
                 <h1>Halloween Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
-                        {
-                            if(recipe.event === "Halloween") 
-                                return <RecipeCard key={recipe} recipe={recipe}/>  
-                            return null 
-                        }
+                        (recipe.event === "Halloween") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>
             </div>
@@ -61,11 +57,7 @@ const Imageslider = ({recipes}) => {
                 <h1>Christmas Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
-                        {
-                            if(recipe.event === "Christmas") 
-                                return <RecipeCard key={recipe} recipe={recipe}/>  
-                            return null 
-                        }
+                        (recipe.event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>
             </div>
