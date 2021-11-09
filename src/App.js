@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Row, Col } from "react-bootstrap";
 import "./App.css";
 import { client } from "./client";
+import Imageslider from "./components/Imageslider";
 
 const App = () => {
   //----------USE STATE----------
@@ -30,13 +30,20 @@ const App = () => {
             image: entry.fields.image.fields.file.url,
             description: entry.fields.description,
             id: index,
+            ingredients: entry.fields.ingredients,
+            method: entry.fields.method,
+            event: entry.fields.event,
           };
         })
       );
     });
   };
 
-  return <>Check the console for the data from Contenful</>;
+  return (
+    <>
+    <Imageslider recipes={recipes}/>
+    </>
+  )
 };
 
 export default App;
