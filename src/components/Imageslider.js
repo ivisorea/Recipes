@@ -1,4 +1,3 @@
-import Carousel from 'react-bootstrap/Carousel'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react'
 import './Imageslider.css'
@@ -14,37 +13,62 @@ const Imageslider = ({recipes}) => {
         dots: true,
         infinite: true,
         arrows: true,
-        speed: 1000,
+        speed: 800,
         slidesToShow: 3,
         slidesToScroll: 2,
         initialSlide: 0,
 
+    // -------Defining responsive settings for the slider------
+        responsive: [
+            {
+                breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        initialSlide: 1,
+                    }
+            },
+            {
+                breakpoint:  425,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        initialSlide: 1,
+                    }
+            }
+        ]
     }
+    
+
     return (
         <>
-            {/* -------Carousel using Bootstrap---------- */}
-            <Carousel interval={null} variant="dark" className='card_recipes'>
-              {recipes.map(recipe => (
-                <Carousel.Item key={recipe.id}>
-                     <RecipeCard recipe={recipe}/>         
-                </Carousel.Item>
-                ))}
-            </Carousel>
-
-            {/* -------Carousel using Slick---------- */}
+            {/* -------Halloween Carousel using Slick---------- */}
             <div style={{ margin: "30px" }} className="carousel">
-                <h1>Basic carousel</h1>
+                <h1>Halloween Recipes</h1>
                 <Slider {...settings}>
-                    {recipes.map((recipe) => (
-                        <RecipeCard recipe={recipe}/>    
-                    ))}
+                    {recipes.map((recipe) => 
+                        {
+                            if(recipe.event === "Halloween") 
+                                return <RecipeCard key={recipe} recipe={recipe}/>  
+                            return null 
+                        }
+                    )}
                 </Slider>
             </div>
 
-       
-            
-
-
+            {/* -------Christmas Carousel using Slick---------- */}
+            <div style={{ margin: "30px" }} className="carousel">
+                <h1>Christmas Recipes</h1>
+                <Slider {...settings}>
+                    {recipes.map((recipe) => 
+                        {
+                            if(recipe.event === "Christmas") 
+                                return <RecipeCard key={recipe} recipe={recipe}/>  
+                            return null 
+                        }
+                    )}
+                </Slider>
+            </div>
         </>
     )
 }

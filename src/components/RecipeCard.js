@@ -15,9 +15,12 @@ const RecipeCard = ({recipe}) => {
                     <Card.Text>
                         {recipe.description}
                     </Card.Text>
+                    
                 </Card.Body>
             </Card>
         </>
+    
+
     )
 }
 

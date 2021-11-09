@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { client } from "./client";
 import Imageslider from "./components/Imageslider";
-import Carousel from "react-bootstrap/Carousel";
+
 const App = () => {
   //----------USE STATE----------
   const [recipes, setRecipes] = useState([]);
@@ -30,6 +30,9 @@ const App = () => {
             image: entry.fields.image.fields.file.url,
             description: entry.fields.description,
             id: index,
+            ingredients: entry.fields.ingredients,
+            method: entry.fields.method,
+            event: entry.fields.event,
           };
         })
       );
