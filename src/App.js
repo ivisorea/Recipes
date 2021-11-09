@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { client } from "./client";
 import Imageslider from "./components/Imageslider";
+import RecipePage from "./components/RecipePage";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => {
   //----------USE STATE----------
@@ -40,10 +42,18 @@ const App = () => {
   };
 
   return (
-    <>
-    <Imageslider recipes={recipes}/>
-    </>
-  )
+    <Router>
+      {/* REACT ROUTING */}
+      <Switch>
+        <Route exact path="/">
+          <Imageslider recipes={recipes} />
+        </Route>
+        <Route exact path="/recipes/:id">
+          <RecipePage recipes={recipes} />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;

@@ -1,9 +1,14 @@
 .card {
-    text-align: center;
+  text-align: center;
 }
 
 .card-img-top {
-    width: 100%;
-   
+  width: 100%;
 }
-
+.default-link {
+  text-decoration: none;
+  color: #212529;
+}
+.default-link:hover {
+  color: #212529;
+}
