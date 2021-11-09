@@ -17,6 +17,8 @@ const RecipePage = ({ recipes }) => {
               <p>{recipe.method}</p>
             </div>
           );
+        } else {
+          return <div></div>;
         }
       })}
     </div>

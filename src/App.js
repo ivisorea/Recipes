@@ -4,7 +4,7 @@ import "./App.css";
 import { client } from "./client";
 import Imageslider from "./components/Imageslider";
 import RecipePage from "./components/RecipePage";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   //----------USE STATE----------
