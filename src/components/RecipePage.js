@@ -1,26 +1,23 @@
 import React from "react";
 import { useParams } from "react-router";
+import ReactMarkdown from "react-markdown";
 
 const RecipePage = ({ recipes }) => {
   const params = useParams();
   return (
     <div>
-      {recipes.map((recipe, index) => {
-        //   CHECKING IF URL MATCHES RECIPE ID
-        if (parseInt(recipe.id) === parseInt(params.id)) {
-          return (
+      {recipes.map(
+        (recipe, index) =>
+          parseInt(recipe.id) === parseInt(params.id) && (
             <div key={index}>
               <img src={recipe.image} alt="" />
               <h2>{recipe.name}</h2>
-              <p>{recipe.description}</p>
-              <p>{recipe.ingredients}</p>
-              <p>{recipe.method}</p>
+              <ReactMarkdown>{recipe.description}</ReactMarkdown>
+              <ReactMarkdown>{recipe.ingredients}</ReactMarkdown>
+              <ReactMarkdown>{recipe.method}</ReactMarkdown>
             </div>
-          );
-        } else {
-          return <div></div>;
-        }
-      })}
+          )
+      )}
     </div>
   );
 };
