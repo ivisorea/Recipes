@@ -37,9 +37,8 @@ const RecipeCard = ({ recipe }) => {
           <Button 
             variant="outline-secondary" 
             size="sm" 
-            onClick={() => {
-                window.location.href = `/recipes/${recipe.id}`;
-            }}
+            as={Link}
+            to={`/recipes/${recipe.id}`}
           >Go To Recipe</Button>
         </Card.Body>
       </Card>
