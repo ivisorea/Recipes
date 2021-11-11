@@ -1,0 +1,33 @@
+.card {
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%;
+}
+.default-link {
+  text-decoration: none;
+  color: #212529;
+}
+.default-link:hover {
+  color: #212529;
+}
+
+a{
+    font-style: italic;
+    font-weight: bold;
+    color: #535555; 
+}
+
+a:hover{
+    color: #212529;
+}
+
+button{
+    margin-top: 10px;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #afb1b1;
+    color: white;
+}
