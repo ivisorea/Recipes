@@ -9,6 +9,7 @@ import { Button, Row, Col,  Nav, Container } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/aboutus";
 import ContactUs from "./pages/contactus";
+import Signin from "./pages/signin";
 import Footer from "./components/footer/footer";
 
 const App = () => {
@@ -52,13 +53,8 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route path="/pages/aboutus"  component={AboutUs} />
-        <Route path="/pages/aboutus"  component={AboutUs} />
-        <Route path="/pages/aboutus"  component={AboutUs} />
         <Route path="/pages/contactus"  component={ContactUs} />
-    {/* <Route path="/components/AboutUs" exact component={AboutUs} />
-        <Route path="/components/AboutUs" exact component={AboutUs} />
-        <Route path="/components/AboutUs" exact component={AboutUs} />
-  <Route path="/components/AboutUs" exact component={AboutUs} /> */}
+        <Route path="/pages/signin"  component={Signin} />
         <Route exact path="/">
           <Imageslider recipes={recipes} />
         </Route>

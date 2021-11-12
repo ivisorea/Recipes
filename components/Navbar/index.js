@@ -6,26 +6,22 @@ const Navbar = () => {
     return (
         <>
             <Nav>
+                
                 <NavLink to="/">
-                    <img /*src={require('')}*/ alt="Home" />
+                    <a class="fas fa-hamburger" style={{display: "flex", justifyContent: "flex-start"}} alt="Home" ></a>
                 </NavLink>
+                
                 <Bars />
                 <NavMenu>
                     <NavLink to="/pages/aboutus" activeStyle>
                     About Us
-                    </NavLink>
-                    <NavLink to="/recipie" activeStyle>
-                    ?????????
-                    </NavLink>
-                    <NavLink to="/vegetarien" activeStyle>
-                    ????????
                     </NavLink>
                     <NavLink to="/pages/contactus" activeStyle>
                      Contact Us   
                     </NavLink>
                 </NavMenu>
                 <NavBtn>
-                 <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+                 <NavBtnLink to='/pages/signin'>Sign In</NavBtnLink>
                  </NavBtn>
             </Nav> 
         </>

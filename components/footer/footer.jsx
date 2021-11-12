@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactUs from '../../pages/contactus';
 
 import './Footer.css';
 
@@ -8,12 +9,14 @@ function Footer () {
     <section className="footer">
         <hr className="footer-seperator" />
             <section className="footer-social-media">
-                <div>
-                    <a href="/" target="_blank" rel="noopener noreferrer">IG</a>
+                <div className="social" style={{display: "flex"}} >
+                    <div >
+                    <a class="fab fa-instagram" href="https://www.instagram.com/buzzfeedtasty/?hl=en" style={{marginRight: "5px"}}></a>                     
+                    </div>
+                    <div >
+                    <a class="fab fa-pinterest-p" href="https://www.pinterest.de/pinterest/delicious-eats/" style={{marginLeft: "5px"}}></a>   
+                    </div>
                 </div>
-                <div>
-                    <a href="/" target="_blank" rel="noopener noreferrer">Pin</a>
-                </div>    
             </section>
             <section className="footer-info">
                 <section className="footer-info-left">
@@ -30,18 +33,18 @@ function Footer () {
                     group3.wbs@gmail.com
                 </section>
                 <section className="footer-info__terms">
-                Contact Us on email!
+                Contact Us via <a href="/pages/contactus"> email </a> !
                 </section>
                 </section>
                 <section className="footer-info-right">
                 <section className="footer-info__number">
-                    Don't know what to put here yet
+                    Don't know what to put here 
                 </section>
                 <section className="footer-info__contact">
-                Don't know what to put here yet
+                Don't know what to put here 
 
                     <br />
-                    Don't know what to put here yet
+                    Don't know what to put here 
 
                 </section>
                 </section>

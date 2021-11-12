@@ -44,7 +44,7 @@ const Imageslider = ({recipes}) => {
         <>
             {/* -------Halloween Carousel using Slick---------- */}
             <div style={{ margin: "30px" }} className="carousel">
-                <h1>Halloween Recipes</h1>
+                <h1 style={{textAlign: "center"}}>Halloween Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
                         (recipe.event === "Halloween") && <RecipeCard key={recipe} recipe={recipe}/>
@@ -54,7 +54,7 @@ const Imageslider = ({recipes}) => {
 
             {/* -------Christmas Carousel using Slick---------- */}
             <div style={{ margin: "30px" }} className="carousel">
-                <h1>Christmas Recipes</h1>
+                <h1 style={{textAlign: "center"}}>Christmas Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
                         (recipe.event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
