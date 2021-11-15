@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+
 import { client } from "./client";
 import Imageslider from "./components/Imageslider";
 import RecipePage from "./components/RecipePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Button, Row, Col, Nav, Container } from "react-bootstrap";
+import Navbar from "./components/Navbar";
+import AboutUs from "./components/pages/aboutus";
+import ContactUs from "./components/pages/contactus";
+import Signin from "./components/pages/signin";
+import Footer from "./components/footer/footer";
 
 const App = () => {
   //----------USE STATE----------
@@ -42,17 +48,23 @@ const App = () => {
   };
 
   return (
-    <Router>
-      {/* REACT ROUTING */}
-      <Switch>
-        <Route exact path="/">
-          <Imageslider recipes={recipes} />
-        </Route>
-        <Route exact path="/recipes/:id">
-          <RecipePage recipes={recipes} />
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/pages/aboutus" component={AboutUs} />
+          <Route path="/pages/contactus" component={ContactUs} />
+          <Route path="/pages/signin" component={Signin} />
+          <Route exact path="/">
+            <Imageslider recipes={recipes} />
+          </Route>
+          <Route exact path="/recipes/:id">
+            <RecipePage recipes={recipes} />
+          </Route>
+        </Switch>
+      </Router>
+      <Footer />
+    </>
   );
 };
 
