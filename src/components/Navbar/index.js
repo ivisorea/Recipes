@@ -8,7 +8,7 @@ const Navbar = () => {
             <Nav>
                 
                 <NavLink to="/">
-                    <a class="fas fa-hamburger" style={{display: "flex", justifyContent: "flex-start"}} alt="Home" ></a>
+                    <i class="fas fa-hamburger" style={{display: "flex", justifyContent: "flex-start"}} alt="Home" ></i>
                 </NavLink>
                 
                 <Bars />

@@ -1,5 +1,5 @@
 import React  from 'react';
-import ContactUs from './contactus';
+
 
 const AboutUs = () => {
     return (
@@ -14,9 +14,9 @@ const AboutUs = () => {
                     Currently eating and cooking in California :)Interested in working with us?<br />
                     Occasionally we create sponsored posts for brands that are a good fit for I am a Food Blog.<br />
                     We’re also available for recipe development and photography.<br />
-                    Send us a quick <a to="/pages/contactus"> email </a>for more info!
+                    Send us a quick <a href="..." to="/pages/contactus" alt="contact"> email </a>for more info!
                 </p>
-                <img src="/team.jpg" />
+                <img src="/team.jpg" alt="team"/>
             </div>
         </div>
     );
