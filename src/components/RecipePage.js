@@ -18,7 +18,7 @@ const RecipePage = ({ recipes }) => {
                 <Col>
                   <img src={recipe.image} alt="" />
                 </Col>
-                <Col>
+                <Col style={{ paddingTop: "45px"}}>
                   <h2>{recipe.name}</h2>
                   <h3>Description</h3>
                   <ReactMarkdown>{recipe.description}</ReactMarkdown>
