@@ -5,7 +5,6 @@ import { client } from "./client";
 import Imageslider from "./components/Imageslider";
 import RecipePage from "./components/RecipePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Button, Row, Col, Nav, Container } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import AboutUs from "./components/pages/aboutus";
 import ContactUs from "./components/pages/contactus";

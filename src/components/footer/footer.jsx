@@ -1,5 +1,5 @@
 import React from "react";
-import ContactUs from "../pages/contactus";
+
 
 import "./Footer.css";
 
@@ -11,17 +11,17 @@ function Footer() {
         <div className="social" style={{ display: "flex" }}>
           <div>
             <a
-              class="fab fa-instagram"
+              className="fab fa-instagram"
               href="https://www.instagram.com/buzzfeedtasty/?hl=en"
-              style={{ marginRight: "5px" }}
-            ></a>
+              style={{ marginRight: "5px" }} alt="Instagram"
+            > </a>
           </div>
           <div>
             <a
-              class="fab fa-pinterest-p"
+              className="fab fa-pinterest-p"
               href="https://www.pinterest.de/pinterest/delicious-eats/"
-              style={{ marginLeft: "5px" }}
-            ></a>
+              style={{ marginLeft: "5px" }} alt="Pinterest"
+            > </a>
           </div>
         </div>
       </section>

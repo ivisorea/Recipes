@@ -1,5 +1,5 @@
 
-import AboutUs from "./aboutus";
+
 
 const ContactUs = () => {
 
