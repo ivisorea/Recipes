@@ -12,24 +12,24 @@ const RecipePage = ({ recipes }) => {
     <>
       {recipes.map(
         (recipe, index) =>
-          parseInt(recipe.id) === parseInt(params.id) && (
+          parseInt(recipe.recipe_id) === parseInt(params.id) && (
             <Container key={index}>
               <Row>
                 <Col>
-                  <img src={recipe.image} alt="" />
+                  <img src={recipe.recipe_image} alt="" />
                 </Col>
                 <Col style={{ paddingTop: "45px"}}>
-                  <h2>{recipe.name}</h2>
+                  <h2>{recipe.recipe_name}</h2>
                   <h3>Description</h3>
-                  <ReactMarkdown>{recipe.description}</ReactMarkdown>
+                  <ReactMarkdown>{recipe.recipe_description}</ReactMarkdown>
                   <h3>Ingredients</h3>
-                  <ReactMarkdown>{recipe.ingredients}</ReactMarkdown>
+                  <ReactMarkdown>{recipe.recipe_ingredients}</ReactMarkdown>
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <h3>Instruction</h3>
-                  <ReactMarkdown>{recipe.method}</ReactMarkdown>
+                  <ReactMarkdown>{recipe.recipe_method}</ReactMarkdown>
                 </Col>
               </Row>
             </Container>

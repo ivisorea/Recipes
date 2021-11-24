@@ -13,12 +13,12 @@ const RecipeCard = ({ recipe }) => {
     <>
       {/* ----Recipes Card using bootstrap components---- */}
       <Card className="card_recipes">
-        <Link to={`/recipes/${recipe.id}`}>
-          <Card.Img variant="top" src={recipe.image} />
+        <Link to={`/recipes/${recipe.recipe_id}`}>
+          <Card.Img variant="top" src={recipe.recipe_image} />
         </Link>
         <Card.Body>
-          <Link to={`/recipes/${recipe.id}`} className="default-link">
-            <Card.Title>{recipe.name}</Card.Title>
+          <Link to={`/recipes/${recipe.recipe_id}`} className="default-link">
+            <Card.Title>{recipe.recipe_name}</Card.Title>
           </Link>
 
           {/* ---- ShowMoreText component to show only first 200 characters of the description ---*/}
@@ -30,7 +30,7 @@ const RecipeCard = ({ recipe }) => {
                 expanded={false}
                 width={300}
             >
-            <Card.Text>{recipe.description}</Card.Text>
+            <Card.Text>{recipe.recipe_description}</Card.Text>
             </ShowMoreText>
 
             {/* ---- Button to show more details of the recipe ----*/}
@@ -38,7 +38,7 @@ const RecipeCard = ({ recipe }) => {
             variant="outline-secondary" 
             size="sm" 
             as={Link}
-            to={`/recipes/${recipe.id}`}
+            to={`/recipes/${recipe.recipe_id}`}
           >Go To Recipe</Button>
         </Card.Body>
       </Card>
