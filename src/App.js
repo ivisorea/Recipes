@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 import Imageslider from "./components/Imageslider";
 import RecipePage from "./components/RecipePage";
@@ -10,9 +11,9 @@ import ContactUs from "./components/pages/contactus";
 import Signin from "./components/pages/signin";
 import Footer from "./components/footer/footer";
 import axios from "axios";
+import Search from "./components/Search";
 
-const apiData = ("http://localhost:5000/api/recipes")
-// const apiDataHeroku = ("https://nameless-everglades-27473.herokuapp.com/api/recipes")
+const apiDataHeroku = ("https://recipes-app-wbs.herokuapp.com/api/recipes")
 
 const App = () => {
   //----------USE STATE----------
@@ -31,7 +32,7 @@ const App = () => {
   //----------FUNCTIONS----------
   const getData = async () => {
     try {
-      const results = await axios.get(apiData);
+      const results = await axios.get(apiDataHeroku);
       
       setRecipes(results.data);
     }catch(err){
@@ -45,11 +46,13 @@ const App = () => {
     <>
       <Router>
         <Navbar />
+        
         <Switch>
           <Route path="/pages/aboutus" component={AboutUs} />
           <Route path="/pages/contactus" component={ContactUs} />
           <Route path="/pages/signin" component={Signin} />
           <Route exact path="/">
+            <Search />
             <Imageslider recipes={recipes} />
           </Route>
           <Route exact path="/recipes/:id">
