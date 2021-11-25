@@ -47,7 +47,7 @@ const Imageslider = ({recipes}) => {
                 <h1 style={{textAlign: "center"}}>Halloween Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
-                        (recipe.event === "Halloween") && <RecipeCard key={recipe} recipe={recipe}/>
+                        (recipe.recipe_event === "Halloween") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>
             </div>
@@ -57,7 +57,7 @@ const Imageslider = ({recipes}) => {
                 <h1 style={{textAlign: "center"}}>Christmas Recipes</h1>
                 <Slider {...settings}>
                     {recipes.map((recipe) => 
-                        (recipe.event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
+                        (recipe.recipe_event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>
             </div>
