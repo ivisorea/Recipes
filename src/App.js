@@ -18,6 +18,7 @@ const apiDataHeroku = ("https://recipes-app-wbs.herokuapp.com/api/recipes")
 const App = () => {
   //----------USE STATE----------
   const [recipes, setRecipes] = useState([]);
+  
 
   //----------USE EFFECT----------
   useEffect(() => {
@@ -52,7 +53,7 @@ const App = () => {
           <Route path="/pages/contactus" component={ContactUs} />
           <Route path="/pages/signin" component={Signin} />
           <Route exact path="/">
-            <Search />
+            <Search recipes={recipes} />
             <Imageslider recipes={recipes} />
           </Route>
           <Route exact path="/recipes/:id">

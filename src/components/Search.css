@@ -1,0 +1,19 @@
+.form-control {
+  width: 40%;
+}
+
+.form-control:focus {
+  border-color: #74f77f;
+  box-shadow: 0 0 0 0.2rem rgba(148, 250, 139, 0.25);
+}
+
+.suggest-list{
+    list-style: none;
+}
+
+.suggest-list a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
