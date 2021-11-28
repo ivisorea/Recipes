@@ -13,15 +13,13 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-  color: #fff;
+  color: ${props => props.activeStyle ? "#a3fc15" : "#fff"};
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem; 
   height: 100%;
   cursor: pointer;
-  &.active {
-    color: #a3fc15;
   }
 `;
 

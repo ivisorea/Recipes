@@ -23,7 +23,7 @@ const RecipeCard = ({ recipe }) => {
 
           {/* ---- ShowMoreText component to show only first 200 characters of the description ---*/}
             <ShowMoreText
-                lines={3}
+                lines={2}
                 more="Show more"
                 less="Show less"
                 anchorClass=""  
