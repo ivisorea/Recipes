@@ -61,7 +61,7 @@ const App = () => {
             <RecipePage recipes={recipes} />
           </Route>
           <Route exact path="/recipe/">
-            <CreateRecipe/>
+            <CreateRecipe getData={getData}/>
           </Route>
           <Route exact path="*">
             <h1>404 Page Not Found</h1>
