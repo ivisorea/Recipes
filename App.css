@@ -1,0 +1,29 @@
+.App{
+   background-image: url(./images/background.jpeg);
+   /* background-color: rgb(223, 221, 221);*/
+    margin: 0 10rem 10rem 10rem;
+    position: relative;
+    
+  
+ }
+
+  .container-fluid{
+   background-image: url(/src/images/background.jpeg);
+    z-index: -1;
+    height: 119vh;;
+    background-size: cover;
+    background-position: center;
+   background-repeat: repeat;
+    position: absolute;
+  
+  
+ }
+ 
+ /*.searchPosition {
+    display: flex;
+    align-items: flex-end;
+    
+  
+
+ } */
+ 
