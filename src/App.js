@@ -12,6 +12,7 @@ import Signin from "./components/pages/signin";
 import Footer from "./components/footer/footer";
 import axios from "axios";
 import Search from "./components/Search";
+import CreateRecipe from "./components/CreateRecipe";
 
 const apiDataHeroku = ("https://recipes-app-wbs.herokuapp.com/api/recipes")
 
@@ -58,6 +59,9 @@ const App = () => {
           </Route>
           <Route exact path="/recipes/:id">
             <RecipePage recipes={recipes} />
+          </Route>
+          <Route exact path="/recipe/">
+            <CreateRecipe/>
           </Route>
           <Route exact path="*">
             <h1>404 Page Not Found</h1>
