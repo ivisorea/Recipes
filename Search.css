@@ -1,0 +1,28 @@
+.form-control {
+  width: 40%;
+  width: fit-content;
+}
+
+.form-control:focus {
+  border-color: #a3fc15;
+  color: #a3fc15;
+  box-shadow: 0 0 0 0.2rem rgba(148, 250, 139, 0.25);
+  width: fit-content;
+}
+
+.suggest-list{
+    list-style: none;
+}
+
+.suggest-list a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pagePosition {
+  margin-left: 5px;
+  margin-top: 20px;
+  width: fit-content;
+}
