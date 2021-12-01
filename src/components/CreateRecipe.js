@@ -24,16 +24,22 @@ const CreateRecipe = () => {
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(err => console.log(err))
-
         e.preventDefault()
+
+        setRecipeName('')
+        setRecipeDescription('')
+        setRecipeIngredients('')
+        setRecipeMethod('')
+        setRecipeEvent('')
+        setRecipeImage('')
+        
     }
     
 
     return (
         <div className="form">
             <h2>Create Recipe</h2>
-            <form method="POST" enctype="multipart/form-data" className="form-inline container-sm"
-            >
+            <form method="POST" enctype="multipart/form-data" className="form-inline container-sm">
                 <Row>
                     <Col>
                         <Form.Label >Recipe Name</Form.Label>
@@ -58,6 +64,7 @@ const CreateRecipe = () => {
                     
                         <Form.Label>Ingredients</Form.Label>
                         <Form.Control 
+                            as="textarea"
                             placeholder="Ingredients" 
                             name="recipe_ingredients" 
                             value= {recipeIngredients}
@@ -88,7 +95,7 @@ const CreateRecipe = () => {
 
                         <Form.Label>Image</Form.Label>
                         <Form.Control 
-                            type="file" 
+                            type="text" 
                             name="recipe_image"
                             value= {recipeImage}
                             onChange={(e) => setRecipeImage(e.target.value)}
