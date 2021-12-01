@@ -13,7 +13,7 @@ const CreateRecipe = () => {
 
     const handleSubmit = (e) => {
         let recipe = { recipe_name: recipeName, recipe_description: recipeDescription, recipe_ingredients: recipeIngredients, recipe_method: recipeMethod, recipe_event: recipeEvent, recipe_image: recipeImage }
-        fetch ('https://recipes-app-wbs.herokuapp.com/api/recipes/create-recipe', {
+        fetch ('https://recipes-app-wbs.herokuapp.com/api/recipes/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -24,16 +24,22 @@ const CreateRecipe = () => {
         .then(res => res.json())
         .then(data => console.log(data))
         .catch(err => console.log(err))
-
         e.preventDefault()
+
+        setRecipeName('')
+        setRecipeDescription('')
+        setRecipeIngredients('')
+        setRecipeMethod('')
+        setRecipeEvent('')
+        setRecipeImage('')
+        
     }
     
 
     return (
         <div className="form">
             <h2>Create Recipe</h2>
-            <form method="POST" enctype="multipart/form-data" className="form-inline container-sm"
-            >
+            <form method="POST" enctype="multipart/form-data" className="form-inline container-sm">
                 <Row>
                     <Col>
                         <Form.Label >Recipe Name</Form.Label>
@@ -58,6 +64,7 @@ const CreateRecipe = () => {
                     
                         <Form.Label>Ingredients</Form.Label>
                         <Form.Control 
+                            as="textarea"
                             placeholder="Ingredients" 
                             name="recipe_ingredients" 
                             value= {recipeIngredients}
@@ -80,6 +87,7 @@ const CreateRecipe = () => {
                         <Form.Label>Event</Form.Label>
                         <Form.Control 
                             type="text" 
+                            placeholder="Event"
                             name="recipe_event"
                             value= {recipeEvent}
                             onChange={(e) => setRecipeEvent(e.target.value)}
@@ -87,7 +95,7 @@ const CreateRecipe = () => {
 
                         <Form.Label>Image</Form.Label>
                         <Form.Control 
-                            type="file" 
+                            type="text" 
                             name="recipe_image"
                             value= {recipeImage}
                             onChange={(e) => setRecipeImage(e.target.value)}
