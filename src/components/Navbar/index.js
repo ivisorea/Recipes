@@ -19,6 +19,9 @@ const Navbar = () => {
                     <NavLink to="/pages/contactus" activeStyle>
                      Contact Us   
                     </NavLink>
+                    <NavLink to="/recipe" activeStyle>
+                    Create Recipe
+                    </NavLink>
                 </NavMenu>
                 <NavBtn>
                  <NavBtnLink to='/pages/signin'>Sign In</NavBtnLink>
