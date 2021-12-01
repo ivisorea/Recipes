@@ -13,7 +13,7 @@ const CreateRecipe = () => {
 
     const handleSubmit = (e) => {
         let recipe = { recipe_name: recipeName, recipe_description: recipeDescription, recipe_ingredients: recipeIngredients, recipe_method: recipeMethod, recipe_event: recipeEvent, recipe_image: recipeImage }
-        fetch ('https://recipes-app-wbs.herokuapp.com/api/recipes/create-recipe', {
+        fetch ('https://recipes-app-wbs.herokuapp.com/api/recipes/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -80,6 +80,7 @@ const CreateRecipe = () => {
                         <Form.Label>Event</Form.Label>
                         <Form.Control 
                             type="text" 
+                            placeholder="Event"
                             name="recipe_event"
                             value= {recipeEvent}
                             onChange={(e) => setRecipeEvent(e.target.value)}
