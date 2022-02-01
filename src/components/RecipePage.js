@@ -9,17 +9,18 @@ import "./RecipePage.css"
 const RecipePage = ({ recipes }) => {
   const params = useParams();
   return (
-    <>
+    <div className="recipe_container">
       {recipes.map(
         (recipe, index) =>
           parseInt(recipe.recipe_id) === parseInt(params.id) && (
             <Container key={index}>
+              <h1>{recipe.recipe_name}</h1>
               <Row>
                 <Col>
-                  <img src={recipe.recipe_image} alt="" />
+                    <img src={recipe.recipe_image} alt="" />
                 </Col>
                 <Col style={{ paddingTop: "45px"}}>
-                  <h2>{recipe.recipe_name}</h2>
+                  
                   <h3>Description</h3>
                   <ReactMarkdown>{recipe.recipe_description}</ReactMarkdown>
                   <h3>Ingredients</h3>
@@ -35,7 +36,7 @@ const RecipePage = ({ recipes }) => {
             </Container>
           )
       )}
-    </>
+    </div>
   );
 };
 
