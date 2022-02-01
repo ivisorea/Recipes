@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const Imageslider = ({recipes}) => {
+const Imageslider = ({recipes, loading}) => {
     // -------Defining settings for the slider------
     const settings = {
         dots: true,
@@ -46,7 +46,9 @@ const Imageslider = ({recipes}) => {
             <div style={{ margin: "30px" }} className="carousel">
                 <h1 style={{textAlign: "center"}}>Halloween Recipes</h1>
                 <Slider {...settings}>
-                    {recipes.map((recipe) => 
+                    {loading ? 
+                        <i class="fas fa-spinner fa-pulse"></i> : 
+                        recipes.map((recipe) => 
                         (recipe.recipe_event === "Halloween") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>
@@ -56,7 +58,9 @@ const Imageslider = ({recipes}) => {
             <div style={{ margin: "30px" }} className="carousel">
                 <h1 style={{textAlign: "center"}}>Christmas Recipes</h1>
                 <Slider {...settings}>
-                    {recipes.map((recipe) => 
+                    {loading ? 
+                        <h1>Loading...</h1> : 
+                        recipes.map((recipe) => 
                         (recipe.recipe_event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}
                 </Slider>

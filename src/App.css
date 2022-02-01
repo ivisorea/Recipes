@@ -5,15 +5,5 @@
   
  }
   
- .container-fluid{
-    background-image: url(./images/background.jpeg);
-    z-index: -1;
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-  
-  
- }
+ 
  
