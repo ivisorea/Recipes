@@ -19,11 +19,11 @@ const Search = ({recipes}) => {
     }
 
     return (
-        <div>
+        <div className='search-container'>
            <section className="container-fluid">
            </section>
-                <form className="form-inline container-md">
-                    <input className="form-control" 
+                <form className="form-inline">
+                    <input className="form-control search-input" 
                     type="search"
                     placeholder="Search a recipe..."
                     aria-label="Search" 
@@ -31,7 +31,7 @@ const Search = ({recipes}) => {
                     onChange={e => onChangeHandler(e.target.value)}
                     />
                     {suggestions.length > 0 && (
-                        <ul className="form-control suggest-list">
+                        <ul className="form-control suggest-list search-input">
                             {suggestions.map(suggestion => ( 
                                 <li key={suggestion.recipe_id}>
                                     <Link to={`/recipes/${suggestion.recipe_id}`}>
