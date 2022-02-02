@@ -59,7 +59,7 @@ const Imageslider = ({recipes, loading}) => {
                 <h1 style={{textAlign: "center"}}>Christmas Recipes</h1>
                 <Slider {...settings}>
                     {loading ? 
-                        <h1>Loading...</h1> : 
+                        <i class="fas fa-spinner fa-pulse"></i> :
                         recipes.map((recipe) => 
                         (recipe.recipe_event === "Christmas") && <RecipeCard key={recipe} recipe={recipe}/>
                     )}

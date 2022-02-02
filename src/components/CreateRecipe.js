@@ -13,7 +13,7 @@ const CreateRecipe = ({getData}) => {
 
     const handleSubmit = (e) => {
         let recipe = { recipe_name: recipeName, recipe_description: recipeDescription, recipe_ingredients: recipeIngredients, recipe_method: recipeMethod, recipe_event: recipeEvent, recipe_image: recipeImage }
-        fetch ('https://recipes-app-wbs.herokuapp.com/api/recipes/', {
+        fetch ('https://recipes-backend-endpoint.herokuapp.com/api/recipes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ import CreateRecipe from "./components/CreateRecipe";
 import xml2js from 'xml2js';
 import { Home } from "./components/pages/Home";
 
-const apiDataHeroku = ("http://localhost:4000/api/recipes");
+const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 
 const App = () => {
   //----------USE STATE----------
