@@ -11,7 +11,7 @@ import Signin from "./components/pages/signin";
 import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import CreateRecipe from "./components/CreateRecipe";
-import xml2js from 'xml2js';
+// import xml2js from 'xml2js';
 import { Home } from "./components/pages/Home";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
@@ -19,7 +19,7 @@ const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recip
 const App = () => {
   //----------USE STATE----------
   const [recipes, setRecipes] = useState([]);
-  const [season, setSeason] = useState("");
+  // const [season, setSeason] = useState("");
   const [loading, setLoading] = useState(false);
 
   //----------USE EFFECT----------
@@ -45,20 +45,20 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    const parser = new xml2js.Parser();
-    const getData = async () => {
-      const results = await axios.get('http://ergast.com/api/f1/2021', {
-        "Content-Type": "application/xml; charset=utf-8"
-      });
-      parser.parseString(results.data, (err, result) => {
-        setSeason(result);
-        console.log(result);
-      }
-      );
-    };
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   const parser = new xml2js.Parser();
+  //   const getData = async () => {
+  //     const results = await axios.get('http://ergast.com/api/f1/2021', {
+  //       "Content-Type": "application/xml; charset=utf-8"
+  //     });
+  //     parser.parseString(results.data, (err, result) => {
+  //       setSeason(result);
+  //       console.log(result);
+  //     }
+  //     );
+  //   };
+  //   getData();
+  // }, []);
     
   
 
