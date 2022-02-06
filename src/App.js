@@ -7,11 +7,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutUs from "./components/pages/aboutus";
 import ContactUs from "./components/pages/contactus";
-import Signin from "./components/pages/signin";
-import Footer from "./components/Footer/Footer";
 import axios from "axios";
 import CreateRecipe from "./components/CreateRecipe";
 import { Home } from "./components/pages/Home";
+import { Footer } from "./components/Footer";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 
@@ -51,7 +50,6 @@ const App = () => {
         <Switch>
           <Route path="/pages/aboutus" component={AboutUs} />
           <Route path="/pages/contactus" component={ContactUs} />
-          <Route path="/pages/signin" component={Signin} />
           <Route exact path="/">
             <Home recipes={recipes} loading={loading}/>
           </Route>
@@ -66,7 +64,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-      <Footer />
+      <Footer/>
     </>
   );
 };

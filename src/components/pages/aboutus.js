@@ -8,13 +8,17 @@ const AboutUs = () => {
                 <h1>About Us</h1>
             </div>
             <div style={{textAlign: "center"}}>
-                <p>
-                    I am a Food Blog is a recipe an travel blog written by husband and wife team Mike and Steph. <br /> 
-                    In its 7 years of existence it has covered such diverse subjects as mini beef wellingtons, driving through iceland’s ring road, and making pho in a pressure cooker.<br />
-                    Currently eating and cooking in California :)Interested in working with us?<br />
-                    Occasionally we create sponsored posts for brands that are a good fit for I am a Food Blog.<br />
-                    We’re also available for recipe development and photography.<br />
-                    Send us a quick <a href="..." to="/pages/contactus" alt="contact"> email </a>for more info!
+            <p>
+                    <br /> 
+                    We are a team of developers passionate about food.
+                    <br />
+                    We wanted to start applying our knowledge learned at <b>WBS Coding School</b> by making this Recipe Blog.
+                    <br />
+                    Do you want to collaborate with us?
+                    <br />
+                    Send us a quick 
+                    <a href='/pages/contactus' alt="contact"> email </a>
+                    for more info!
                 </p>
                 <img src="/team.jpg" alt="team"/>
             </div>
