@@ -1,5 +1,5 @@
 .form-control {
-  width: 40%;
+  width: 30%;
 }
 
 .form-control:focus {
@@ -19,7 +19,7 @@
 }
 
 .search-container {
-  background-image: url('../images/background.jpeg');
+  background-image: url('../../images/background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

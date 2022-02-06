@@ -31,6 +31,7 @@
 .footer-info {
   display: flex;
   justify-content: center;
+  padding: 1rem;
 }
 
 .footer-info-left,
@@ -92,8 +93,9 @@
 
 .icon {
   font-size: 1.5rem;
-  padding: 5%;
+  padding: 0 5%;
 }
+
 /*https://github.com/briancodex/react-navbar-v3/tree/main/src
   https://www.youtube.com/watch?v=K7F2mmQY1UI
   */

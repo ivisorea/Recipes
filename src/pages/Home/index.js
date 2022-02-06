@@ -1,6 +1,6 @@
 import React from 'react'
-import Imageslider from '../Imageslider'
-import Search from '../Search'
+import { ImageSlider } from '../../components/ImageSlider'
+import { Search } from '../../components/Search'
 
 export const Home = ({recipes, loading}) => {
     return (
@@ -9,7 +9,7 @@ export const Home = ({recipes, loading}) => {
                 <Search recipes={recipes}/>
             </div>
             <div className='images-slider'>
-                <Imageslider recipes={recipes} loading={loading}/>
+                <ImageSlider recipes={recipes} loading={loading}/>
             </div>
         </>
         

@@ -2,17 +2,15 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import RecipePage from "./components/RecipePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import AboutUs from "./components/pages/aboutus";
-import ContactUs from "./components/pages/contactus";
-import Signin from "./components/pages/signin";
-import Footer from "./components/Footer/Footer";
 import axios from "axios";
-import CreateRecipe from "./components/CreateRecipe";
-// import xml2js from 'xml2js';
-import { Home } from "./components/pages/Home";
+import { Footer } from "./components/Footer";
+import { AboutUs } from "./pages/AboutUs";
+import { ContactUs } from "./pages/ContactUs";
+import { Home } from "./pages/Home";
+import { CreateRecipe } from "./components/CreateRecipe";
+import { RecipePage } from "./components/RecipePage";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 
@@ -45,23 +43,6 @@ const App = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const parser = new xml2js.Parser();
-  //   const getData = async () => {
-  //     const results = await axios.get('http://ergast.com/api/f1/2021', {
-  //       "Content-Type": "application/xml; charset=utf-8"
-  //     });
-  //     parser.parseString(results.data, (err, result) => {
-  //       setSeason(result);
-  //       console.log(result);
-  //     }
-  //     );
-  //   };
-  //   getData();
-  // }, []);
-    
-  
-
   return (
     <>
       <Router>
@@ -69,7 +50,6 @@ const App = () => {
         <Switch>
           <Route path="/pages/aboutus" component={AboutUs} />
           <Route path="/pages/contactus" component={ContactUs} />
-          <Route path="/pages/signin" component={Signin} />
           <Route exact path="/">
             <Home recipes={recipes} loading={loading}/>
           </Route>
@@ -84,7 +64,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
-      <Footer />
+      <Footer/>
     </>
   );
 };

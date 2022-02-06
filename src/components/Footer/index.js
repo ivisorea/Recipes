@@ -1,20 +1,10 @@
 import React from "react";
-import "./Footer.css";
+import "./styles.css";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <section className="footer">
       <hr className="footer-seperator" />
-      <section className="footer-social-media">
-        <div className="social" style={{ display: "flex" }}>
-          <div>
-            
-          </div>
-          <div>
-            
-          </div>
-        </div>
-      </section>
       <section className="footer-info">
         <section className="footer-info-left">
           <section className="footer-info__name">
@@ -60,8 +50,6 @@ const Footer = () => {
             
           </section>
           <section className="footer-info__contact">
-            <br />
-            <br />
             <span>
             Design by Ivis, Dominique and Chris.
             </span>
@@ -72,4 +60,4 @@ const Footer = () => {
   );
 }
 
-export default Footer;
+

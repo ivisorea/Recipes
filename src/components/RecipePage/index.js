@@ -4,9 +4,9 @@ import ReactMarkdown from "react-markdown";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container"
-import "./RecipePage.css"
+import "./styles.css"
 
-const RecipePage = ({ recipes }) => {
+export const RecipePage = ({ recipes }) => {
   const params = useParams();
   return (
     <div className="recipe_container">
@@ -39,5 +39,3 @@ const RecipePage = ({ recipes }) => {
     </div>
   );
 };
-
-export default RecipePage;
