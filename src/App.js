@@ -5,12 +5,12 @@ import "./App.css";
 import RecipePage from "./components/RecipePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import AboutUs from "./components/pages/aboutus";
-import ContactUs from "./components/pages/contactus";
 import axios from "axios";
 import CreateRecipe from "./components/CreateRecipe";
-import { Home } from "./components/pages/Home";
 import { Footer } from "./components/Footer";
+import { AboutUs } from "./pages/AboutUs";
+import { ContactUs } from "./pages/ContactUs";
+import { Home } from "./pages/Home";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 

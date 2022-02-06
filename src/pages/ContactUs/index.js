@@ -1,7 +1,7 @@
+import React from "react";
 
 
-
-const ContactUs = () => {
+export const ContactUs = () => {
 
     return (
         <div className="section" style={{marginTop: "120px", marginBottom: "40px"}}>
@@ -51,6 +51,3 @@ const ContactUs = () => {
     );
 }
   
-
-
-export default ContactUs; 

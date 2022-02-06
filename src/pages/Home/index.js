@@ -1,6 +1,6 @@
 import React from 'react'
-import Imageslider from '../Imageslider'
-import Search from '../Search'
+import Imageslider from '../../components/Imageslider'
+import Search from '../../components/Search'
 
 export const Home = ({recipes, loading}) => {
     return (
