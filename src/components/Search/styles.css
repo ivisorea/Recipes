@@ -1,0 +1,37 @@
+.form-control {
+  width: 40%;
+}
+
+.form-control:focus {
+  border-color: #1b532099;
+  box-shadow: 0 0 0 0.2rem rgba(130, 175, 126, 0.25);
+}
+
+.suggest-list{
+    list-style: none;
+}
+
+.suggest-list a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.search-container {
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-input {
+  margin-left: 5%;
+}
