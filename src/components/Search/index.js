@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import './styles.css'
 import { Link } from "react-router-dom";
+import './styles.css'
 
 
 export const Search = ({recipes}) => {
