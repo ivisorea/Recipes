@@ -4,10 +4,10 @@ import ShowMoreText from "react-show-more-text";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./RecipeCard.css";
+import "./styles.css";
 
 
-const RecipeCard = ({ recipe }) => {
+export const RecipeCard = ({ recipe }) => {
 
   return (
     <>
@@ -45,5 +45,3 @@ const RecipeCard = ({ recipe }) => {
     </>
   );
 };
-
-export default RecipeCard;

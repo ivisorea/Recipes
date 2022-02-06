@@ -1,13 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react'
-import './Imageslider.css'
-import RecipeCard from './RecipeCard';
+import './styles.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { RecipeCard } from "../RecipeCard";
 
 
-const Imageslider = ({recipes, loading}) => {
+export const ImageSlider = ({recipes, loading}) => {
     // -------Defining settings for the slider------
     const settings = {
         dots: true,
@@ -68,7 +68,3 @@ const Imageslider = ({recipes, loading}) => {
         </>
     )
 }
-
-
-
-export default Imageslider

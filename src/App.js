@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import RecipePage from "./components/RecipePage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import axios from "axios";
-import CreateRecipe from "./components/CreateRecipe";
 import { Footer } from "./components/Footer";
 import { AboutUs } from "./pages/AboutUs";
 import { ContactUs } from "./pages/ContactUs";
 import { Home } from "./pages/Home";
+import { CreateRecipe } from "./components/CreateRecipe";
+import { RecipePage } from "./components/RecipePage";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 

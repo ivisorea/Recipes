@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { Col, Form, Row, Button } from 'react-bootstrap'
-import './CreateRecipe.css'
+import './styles.css'
 
-const CreateRecipe = ({getData}) => {
+export const CreateRecipe = ({getData}) => {
     const [recipeName, setRecipeName] = useState('')
     const [recipeDescription, setRecipeDescription] = useState('')
     const [recipeIngredients, setRecipeIngredients] = useState('')
@@ -116,5 +116,3 @@ const CreateRecipe = ({getData}) => {
         </div>
     )
 }
-
-export default CreateRecipe

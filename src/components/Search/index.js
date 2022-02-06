@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import './Search.css'
+import './styles.css'
 import { Link } from "react-router-dom";
 
 
-const Search = ({recipes}) => {
+export const Search = ({recipes}) => {
     const [recipeName, setRecipeName] = useState('')
     const [suggestions, setSuggestions] = useState('')
     
@@ -48,6 +48,4 @@ const Search = ({recipes}) => {
         </div>
     )
 }
-
-export default Search
 
