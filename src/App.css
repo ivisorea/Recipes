@@ -5,7 +5,7 @@
   
  }
   
- *{
-    font-family: 'Arista 2.0 Light', sans-serif, 'Roboto';
+p, span{
+    font-family: 'Roboto', sans-serif;
  }
  

@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-form, 
+.textarea-form {
+    margin: .5rem;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-family:  'Roboto';
+    padding: 1rem;
+}
+
+.input-form {
+    height: 3rem;
+}
+.btn{
+    background-color: #0e0d0d;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family:  'Roboto';
+    cursor: pointer;
+    width: auto;
+}
+.btn:hover{
+    background-color: #a3fc15;
+}
+.section-title p{
+    text-align: center;
+}

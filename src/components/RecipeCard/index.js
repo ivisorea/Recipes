@@ -21,25 +21,7 @@ export const RecipeCard = ({ recipe }) => {
             <Card.Title>{recipe.recipe_name}</Card.Title>
           </Link>
 
-          {/* ---- ShowMoreText component to show only first 200 characters of the description ---*/}
-            <ShowMoreText
-                lines={2}
-                more="Show more"
-                less="Show less"
-                anchorClass=""  
-                expanded={false}
-                width={300}
-            >
-            <Card.Text>{recipe.recipe_description}</Card.Text>
-            </ShowMoreText>
-
-            {/* ---- Button to show more details of the recipe ----*/}
-          <Button 
-            variant="outline-secondary" 
-            size="sm" 
-            as={Link}
-            to={`/recipes/${recipe.recipe_id}`}
-          >Go To Recipe</Button>
+          
         </Card.Body>
       </Card>
     </>
