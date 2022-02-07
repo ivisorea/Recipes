@@ -1,6 +1,4 @@
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import ShowMoreText from "react-show-more-text";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import { Link } from "react-router-dom";
