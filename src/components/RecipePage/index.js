@@ -1,9 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container"
+import {Row, Col, Container} from "react-bootstrap";
 import "./styles.css"
 
 export const RecipePage = ({ recipes }) => {
@@ -20,7 +18,6 @@ export const RecipePage = ({ recipes }) => {
                     <img src={recipe.recipe_image} alt="" />
                 </Col>
                 <Col style={{ paddingTop: "45px"}}>
-                  
                   <h3>Description</h3>
                   <ReactMarkdown>{recipe.recipe_description}</ReactMarkdown>
                   <h3>Ingredients</h3>

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 import './styles.css';
+import { Row } from "react-bootstrap";
 
 export const ContactUs = () => {
     const form = useRef();
@@ -21,7 +22,6 @@ export const ContactUs = () => {
     return (
         <div className="section" style={{marginTop: "120px", marginBottom: "40px"}}>
             <div className="container">
-                <div className="row">
                     <div className="col-md-12">
                         <div className="section-title">
                             <h2 className="title">Contact Us</h2>
@@ -29,21 +29,16 @@ export const ContactUs = () => {
                                  please do not hesitate to give us your feedback. Thank you.</p><hr/>
                             <div className="container">
                                 <form ref={form} className="form" onSubmit={sendEmail}>
-                                    <div className="row" >
+                                    <div className="row-contact" >
                                         <input className="input-form form-control" placeholder = "Name"  name="user_name" type="text" required />
                                         <input className="input-form form-control" placeholder = "Email"  name="user_email" type="email" required/>
                                         <textarea className="textarea-form form-control" placeholder = "Message"  name="message" rows="10" required></textarea>
-                                    
                                     <input type="submit" className="btn primary-btn submit" value="Send"/>
                                     </div>
                                 </form>
                             </div>
-                            
                         </div>
                     </div>
-
-                </div>
-
             </div>
         </div>
     );
