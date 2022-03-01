@@ -9,7 +9,7 @@ import { Footer } from "./components/Footer";
 import { AboutUs } from "./pages/AboutUs";
 import { ContactUs } from "./pages/ContactUs";
 import { Home } from "./pages/Home";
-import { CreateRecipe } from "./components/CreateRecipe";
+import { CreateRecipe } from "./pages/CreateRecipe";
 import { RecipePage } from "./components/RecipePage";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
@@ -17,19 +17,22 @@ const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recip
 const App = () => {
   //----------USE STATE----------
   const [recipes, setRecipes] = useState([]);
-  // const [season, setSeason] = useState("");
   const [loading, setLoading] = useState(false);
 
   //----------USE EFFECT----------
   useEffect(() => {
-
-    getData();
+    setLoading(true);
+    axios
+      .get(apiDataHeroku)
+      .then(response => {
+        setRecipes(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }, []);
-
-  useEffect(() => {
-    console.log("Modified and saved data into useState: ");
-    console.log(recipes);
-  }, [recipes]);
+    
 
   //----------FUNCTIONS----------
   const getData = async () => {
