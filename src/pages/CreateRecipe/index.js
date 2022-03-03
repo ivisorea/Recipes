@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { RecipeForm } from '../../components/RecipeForm'
-import './styles.css'
 
 export const CreateRecipe = ({getData}) => {
     const [recipeName, setRecipeName] = useState('')

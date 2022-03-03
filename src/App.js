@@ -11,6 +11,7 @@ import { ContactUs } from "./pages/ContactUs";
 import { Home } from "./pages/Home";
 import { CreateRecipe } from "./pages/CreateRecipe";
 import { RecipePage } from "./components/RecipePage";
+import { NotFound } from "./pages/NotFound";
 
 const apiDataHeroku = ("https://recipes-backend-endpoint.herokuapp.com/api/recipes");
 
@@ -63,7 +64,7 @@ const App = () => {
             <CreateRecipe getData={getData}/>
           </Route>
           <Route exact path="*">
-            <h1>404 Page Not Found</h1>
+            <NotFound/>
           </Route>
         </Switch>
       </Router>

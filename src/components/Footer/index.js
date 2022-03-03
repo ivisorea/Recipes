@@ -32,7 +32,7 @@ export const Footer = () => {
             > 
               <i class="fab fa-pinterest icon"></i>
             </a>
-            <a href="...">
+            <a href="https://github.com/ivisorea/Recipes">
               <i class="fab fa-github icon"></i>
             </a>
           </section>
