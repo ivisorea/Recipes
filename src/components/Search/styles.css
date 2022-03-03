@@ -1,6 +1,4 @@
-.form-control {
-  width: 30%;
-}
+
 
 .form-control:focus {
   border-color: #1b532099;
@@ -27,11 +25,12 @@
   height: 50vh;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
 }
 
 .search-input {
   margin-left: 5%;
+  width: 30%;
 }

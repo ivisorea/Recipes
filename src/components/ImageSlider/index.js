@@ -42,6 +42,30 @@ export const ImageSlider = ({recipes, loading}) => {
 
     return (
         <>
+            {/* -------Easter Carousel using Slick---------- */}
+            <div style={{ margin: "30px" }} className="carousel">
+                <h1 style={{textAlign: "center"}}>Easter Recipes</h1>
+                <Slider {...settings}>
+                    {loading ? 
+                        <i class="fas fa-spinner fa-pulse"></i> :
+                        recipes.map((recipe) => 
+                        (recipe.recipe_event === "Easter") && <RecipeCard key={recipe} recipe={recipe}/>
+                    )}
+                </Slider>
+            </div>
+            
+            {/* -------Valentin's Day Carousel using Slick---------- */}
+            <div style={{ margin: "30px" }} className="carousel">
+                <h1 style={{textAlign: "center"}}>Valentine's Day Recipes</h1>
+                <Slider {...settings}>
+                    {loading ? 
+                        <i class="fas fa-spinner fa-pulse"></i> : 
+                        recipes.map((recipe) => 
+                        (recipe.recipe_event === "Valentine's Day") && <RecipeCard key={recipe} recipe={recipe}/>
+                    )}
+                </Slider>
+            </div>
+
             {/* -------Halloween Carousel using Slick---------- */}
             <div style={{ margin: "30px" }} className="carousel">
                 <h1 style={{textAlign: "center"}}>Halloween Recipes</h1>

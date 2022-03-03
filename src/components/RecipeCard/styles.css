@@ -4,6 +4,7 @@
 
 .card-img-top {
   width: 100%;
+  padding: 1rem;
 }
 .default-link {
   text-decoration: none;
@@ -17,17 +18,10 @@ a{
     font-style: italic;
     font-weight: bold;
     color: #535555; 
+    font-family: 'Arista 2.0 Light', sans-serif, 'Roboto';
 }
 
 a:hover{
     color: #212529;
 }
 
-button{
-    margin-top: 10px;
-}
-
-.btn-outline-secondary:hover{
-    background-color: #afb1b1;
-    color: white;
-}
